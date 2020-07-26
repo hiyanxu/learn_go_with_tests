@@ -37,7 +37,7 @@ func TestHello3(t *testing.T) {
 }
 
 func TestHello4(t *testing.T) {
-	// t.Helper()需要告诉测试套件这个方法是辅助函数，当测试失败时报告的行数是函数调用的地方
+	// go1.9新特性：t.Helper()需要告诉测试套件这个方法是辅助函数，当测试失败时报告的行数是函数调用的地方
 	// 当t.Helper()注释时，报错： hello_test.go:42: get "Hello, World", want "Hello, World1"（非函数调用方）
 	assertCorrectMessage := func(t *testing.T, got string, want string) {
 		t.Helper()
