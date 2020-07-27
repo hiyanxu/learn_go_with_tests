@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/array_slice/Sum.go" beforeDir="false" afterPath="$PROJECT_DIR$/array_slice/Sum.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/array_slice/Sum_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/array_slice/Sum_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello/hello_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello/hello_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +82,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
