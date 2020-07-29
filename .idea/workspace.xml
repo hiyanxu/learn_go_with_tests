@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="" />
+    <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestRepeat1 in repeat_test.go">
+  <component name="RunManager" selected="Go Build.go build injection.go">
+    <configuration name="go build injection.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/di/injection.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestHello in hello_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/hello" />
@@ -67,6 +77,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build injection.go" />
         <item itemvalue="Go Test.TestRepeat1 in repeat_test.go" />
         <item itemvalue="Go Test.TestHello in hello_test.go" />
       </list>
