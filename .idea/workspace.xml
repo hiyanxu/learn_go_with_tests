@@ -50,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build injection.go">
+  <component name="RunManager" selected="Go Test.TestPlayerServer/none in score_test.go">
     <configuration name="go build injection.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -69,6 +69,16 @@
       <pattern value="^TestHello$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestPlayerServer/none in score_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/http" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/http/score_test.go" />
+      <pattern value="^TestPlayerServer$/^none$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestRepeat1 in repeat_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/iteration" />
@@ -81,6 +91,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestPlayerServer/none in score_test.go" />
         <item itemvalue="Go Build.go build injection.go" />
         <item itemvalue="Go Test.TestRepeat1 in repeat_test.go" />
         <item itemvalue="Go Test.TestHello in hello_test.go" />
