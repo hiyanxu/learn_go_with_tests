@@ -7,7 +7,7 @@ import (
 )
 
 type PlayerStore interface {
-	GetPlayerScore(name string) string
+	GetPlayerScore(name string) int
 	RecordWin(name string)
 }
 
@@ -16,7 +16,7 @@ type PlayerServer struct {
 }
 
 type StubPlayerStore struct {
-	scores   map[string]string
+	scores   map[string]int
 	winCalls []string
 }
 
@@ -45,10 +45,10 @@ func (p *PlayerServer) processWin(w http.ResponseWriter, player string) {
 func (p *PlayerServer) showScore(w http.ResponseWriter, player string) {
 	//player := r.URL.Path[len("/players/"):]
 	score := p.store.GetPlayerScore(player)
-	if score == "" {
+	if score == 0 {
 		w.WriteHeader(http.StatusNotFound)
 	}
-	fmt.Fprintf(w, score)
+	fmt.Fprint(w, score)
 }
 
 //func PlayerServer(w http.ResponseWriter, r *http.Request) {
@@ -59,19 +59,19 @@ func (p *PlayerServer) showScore(w http.ResponseWriter, player string) {
 //	fmt.Fprintf(w, score)
 //}
 
-func (s PlayerServer) GetPlayerScore(name string) string {
+func (s PlayerServer) GetPlayerScore(name string) int {
 	if name == "Pepper" {
-		return "20"
+		return 20
 	}
 
 	if name == "Floyd" {
-		return "10"
+		return 10
 	}
 
-	return ""
+	return 0
 }
 
-func (s *StubPlayerStore) GetPlayerScore(name string) string {
+func (s *StubPlayerStore) GetPlayerScore(name string) int {
 	return s.scores[name]
 }
 
@@ -90,22 +90,25 @@ HandlerFunc是一个函数类型，该类型同样实现了上面的handler接�
 */
 
 type InMemoryPlayerStore struct {
-	store map[string]string
+	store map[string]int
 }
 
-func (i *InMemoryPlayerStore) GetPlayerScore(name string) string {
-	fmt.Println("hehe")
-	return "123"
+func NewInMemoryPlayerStore() *InMemoryPlayerStore {
+	return &InMemoryPlayerStore{store: map[string]int{}}
+}
+
+func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
+	return i.store[name]
 }
 
 func (i *InMemoryPlayerStore) RecordWin(name string) {
-
+	i.store[name]++
 }
 
 func main() {
 	// 将PlayerServer转换为HandlerFunc
 	//handler := http.HandlerFunc(PlayerServer)
-	handler := &PlayerServer{store: &InMemoryPlayerStore{}}
+	handler := &PlayerServer{store: NewInMemoryPlayerStore()}
 
 	// ListenAndServe()监听一个端口，在该端口上处理请求
 	if err := http.ListenAndServe(":9091", handler); err != nil {

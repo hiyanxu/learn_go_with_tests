@@ -8,9 +8,9 @@ import (
 )
 
 func TestPlayerServer(t *testing.T) {
-	store := StubPlayerStore{scores: map[string]string{
-		"Pepper": "20",
-		"Floyd":  "10",
+	store := StubPlayerStore{scores: map[string]int{
+		"Pepper": 20,
+		"Floyd":  10,
 	}}
 	server := &PlayerServer{store: &store}
 
@@ -89,7 +89,7 @@ func assertHttpStatus(t *testing.T, got int, want int) {
 }
 
 func TestStoreWins(t *testing.T) {
-	store := StubPlayerStore{scores: map[string]string{}}
+	store := StubPlayerStore{scores: map[string]int{}}
 	server := &PlayerServer{&store}
 
 	t.Run("post", func(t *testing.T) {
@@ -116,9 +116,11 @@ func newPostWinRequest(name string) *http.Request {
 }
 
 func TestRecordingWinsAndRetrievingThem(t *testing.T) {
-	store := InMemoryPlayerStore{}
-	server := PlayerServer{&store}
 	player := "Pepper"
+	store := InMemoryPlayerStore{store: map[string]int{
+		player: 0,
+	}}
+	server := PlayerServer{&store}
 
 	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
 	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
