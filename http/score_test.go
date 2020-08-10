@@ -1,11 +1,12 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"reflect"
 	"testing"
 )
@@ -121,25 +122,25 @@ func newPostWinRequest(name string) *http.Request {
 	return req
 }
 
-func TestRecordingWinsAndRetrievingThem(t *testing.T) {
-	player := "Pepper"
-	store := InMemoryPlayerStore{store: map[string]int{
-		player: 0,
-	}}
-	//server := PlayerServer{&store}
-	server := NewPlayerServer(&store)
-
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
-	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
-
-	response := httptest.NewRecorder()
-	server.ServeHTTP(response, newGetScoreRequest(player))
-	assertHttpStatus(t, response.Code, http.StatusOK)
-
-	assertResponseBody(t, response.Body.String(), "3")
-
-}
+//func TestRecordingWinsAndRetrievingThem(t *testing.T) {
+//	player := "Pepper"
+//	store := InMemoryPlayerStore{store: map[string]int{
+//		player: 0,
+//	}}
+//	//server := PlayerServer{&store}
+//	server := NewPlayerServer(&store)
+//
+//	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
+//	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
+//	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
+//
+//	response := httptest.NewRecorder()
+//	server.ServeHTTP(response, newGetScoreRequest(player))
+//	assertHttpStatus(t, response.Code, http.StatusOK)
+//
+//	assertResponseBody(t, response.Body.String(), "3")
+//
+//}
 
 func TestLeague(t *testing.T) {
 	wantedLeague := []Player{
@@ -169,11 +170,11 @@ func getLeagueFromResponse(t *testing.T, body io.Reader) (league []Player) {
 	t.Helper()
 
 	// 将返回的json数据解析为特定的类型
-	err := json.NewDecoder(body).Decode(&league)
-	if err != nil {
-		t.Fatalf("Unable to parse response from server '%s' into slice of Player, '%v'", body, err)
-	}
-
+	//err := json.NewDecoder(body).Decode(&league)
+	//if err != nil {
+	//	t.Fatalf("Unable to parse response from server '%s' into slice of Player, '%v'", body, err)
+	//}
+	league, _ = NewLeague(body)
 	return
 }
 
@@ -225,4 +226,68 @@ func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 
 func newLeagueRequest() *http.Request {
 	return httptest.NewRequest(http.MethodGet, "/league", nil)
+}
+
+func TestFileSystemStore(t *testing.T) {
+	t.Run("/league reader", func(t *testing.T) {
+		//database := strings.NewReader(`[{"Name": "Cleo", "Wins": 10}, {"Name": "Chris", "Wins": 33}]`)
+		database, cleanDatabase := createTempFile(t, `[{"Name": "Cleo", "Wins": 10}, {"Name": "Chris", "Wins": 33}]`)
+		store := FileSystemStore{database}
+		defer cleanDatabase()
+
+		got := store.GetLeague()
+		want := []Player{
+			{"Cleo", 10},
+			{"Chris", 33},
+		}
+
+		assertLeague(t, got, want)
+	})
+
+	t.Run("get Player score", func(t *testing.T) {
+		//database := strings.NewReader(`[{"Name": "Cleo", "Wins": 10}, {"Name": "Chris", "Wins": 33}]`)
+		database, cleanDatabase := createTempFile(t, `[{"Name": "Cleo", "Wins": 10}, {"Name": "Chris", "Wins": 33}]`)
+		store := FileSystemStore{database}
+		defer cleanDatabase()
+
+		got := store.GetPlayerScore("Chris")
+		want := 33
+		assertScoreEquals(t, got, want)
+	})
+
+	t.Run("store wins for existing players", func(t *testing.T) {
+		database, cleanDatabase := createTempFile(t, `[{"Name": "Cleo", "Wins": 10}, {"Name": "Chris", "Wins": 33}]`)
+		store := FileSystemStore{database}
+		defer cleanDatabase()
+
+		store.RecordWin("Chris")
+
+		got := store.GetPlayerScore("Chris")
+		want := 34
+		assertScoreEquals(t, got, want)
+	})
+}
+
+func assertScoreEquals(t *testing.T, got, want int) {
+	t.Helper()
+
+	if got != want {
+		t.Errorf("got %d want %d", got, want)
+	}
+}
+
+func createTempFile(t *testing.T, initialData string) (io.ReadWriteSeeker, func()) {
+	t.Helper()
+
+	tmpfile, err := ioutil.TempFile("", "db")
+	if err != nil {
+		t.Fatalf("could not create temp file %v", err)
+	}
+
+	tmpfile.Write([]byte(initialData))
+	removeFile := func() {
+		os.Remove(tmpfile.Name())
+	}
+
+	return tmpfile, removeFile
 }

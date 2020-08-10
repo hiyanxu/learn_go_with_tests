@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 )
@@ -172,6 +173,78 @@ func (i *InMemoryPlayerStore) GetLeague() []Player {
 	}
 
 	return league
+}
+
+func NewLeague(rdr io.Reader) ([]Player, error) {
+	var league []Player
+	err := json.NewDecoder(rdr).Decode(&league)
+	if err != nil {
+		err = fmt.Errorf("problem parsing league, %v", err)
+	}
+
+	return league, err
+}
+
+type FileSystemStore struct {
+	//database io.Reader
+	//database io.ReadSeeker
+	database io.ReadWriteSeeker
+}
+
+func (f *FileSystemStore) GetLeague() League {
+	//var league []Player
+	//json.NewDecoder(f.database).Decode(&league)
+	//return league
+	f.database.Seek(0, 0)
+	league, _ := NewLeague(f.database)
+	return league
+}
+
+//type FileSystemPlayerStore struct {
+//	database io.Reader
+//}
+
+func (f *FileSystemStore) GetPlayerScore(name string) int {
+	//var wins int
+	//for _, player := range f.GetLeague() {
+	//	if player.Name == name {
+	//		wins = player.Wins
+	//		break
+	//	}
+	//}
+	player := f.GetLeague().Find(name)
+	if player != nil {
+		return player.Wins
+	}
+
+	return 0
+}
+
+func (f *FileSystemStore) RecordWin(name string) {
+	league := f.GetLeague()
+
+	//for i, player := range league {
+	//	if player.Name == name {
+	//		// player是副本，改变该值，不会影响原数据
+	//		league[i].Wins++
+	//	}
+	//}
+	league.Find(name).Wins++
+
+	f.database.Seek(0, 0)
+	json.NewEncoder(f.database).Encode(league)
+}
+
+type League []Player
+
+func (l League) Find(name string) *Player {
+	for i, p := range l {
+		if p.Name == name {
+			return &l[i]
+		}
+	}
+
+	return nil
 }
 
 func main() {
