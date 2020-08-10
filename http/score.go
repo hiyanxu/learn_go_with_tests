@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -9,18 +10,73 @@ import (
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
+	GetLeague() []Player
 }
 
 type PlayerServer struct {
 	store PlayerStore
+	//router *http.ServeMux // 该server具有n个路由，可以提前装载好
+	http.Handler
+}
+
+func NewPlayerServer(store PlayerStore) *PlayerServer {
+	p := &PlayerServer{
+		store,
+		http.NewServeMux(),
+	}
+
+	router := http.NewServeMux()
+	router.Handle("/league", http.HandlerFunc(p.leagueHandler))
+	router.Handle("/players/", http.HandlerFunc(p.playerHandler))
+
+	p.Handler = router
+	return p
 }
 
 type StubPlayerStore struct {
 	scores   map[string]int
 	winCalls []string
+	league   []Player
 }
 
-func (p *PlayerServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+type Player struct {
+	Name string
+	Wins int
+}
+
+// 不再需要该方法，因为在http包中，mux多路复用器已经实现了http.Handler接口
+//func (p *PlayerServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+//	//router := http.NewServeMux()
+//	////router.Handle("/league", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+//	////	//w.WriteHeader(http.StatusOK)
+//	////}))
+//	//router.Handle("/league", http.HandlerFunc(p.leagueHandler))
+//	//
+//	//router.Handle("/players/", http.HandlerFunc(p.playerHandler))
+//
+//	// 路由已经装载好，请求过来直接分发
+//	p.router.ServeHTTP(w, r)
+//}
+
+func (p *PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("content-type", "application/json")
+
+	//leagues := p.getLeagues()
+	json.NewEncoder(w).Encode(p.store.GetLeague())
+}
+
+// 当前的请求需要获取相应的json
+func (p *PlayerServer) getLeagues() []Player {
+	return []Player{
+		{
+			"Chris",
+			20,
+		},
+	}
+}
+
+func (p *PlayerServer) playerHandler(w http.ResponseWriter, r *http.Request) {
 	player := r.URL.Path[len("/players/"):]
 	//player := r.URL.Path[len("/players/"):]
 	//score := p.store.GetPlayerScore(player)
@@ -79,6 +135,10 @@ func (s *StubPlayerStore) RecordWin(name string) {
 	s.winCalls = append(s.winCalls, name)
 }
 
+func (s *StubPlayerStore) GetLeague() []Player {
+	return s.league
+}
+
 /**
 http handler实现：
 type Handler interface {
@@ -103,6 +163,15 @@ func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
 
 func (i *InMemoryPlayerStore) RecordWin(name string) {
 	i.store[name]++
+}
+
+func (i *InMemoryPlayerStore) GetLeague() []Player {
+	var league []Player
+	for name, wins := range i.store {
+		league = append(league, Player{name, wins})
+	}
+
+	return league
 }
 
 func main() {
