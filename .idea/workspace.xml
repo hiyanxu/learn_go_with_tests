@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestPlayerServer/none in score_test.go">
+  <component name="RunManager" selected="Go Test.TestNewRunner in runner_test.go">
     <configuration name="go build injection.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -61,14 +61,32 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="TestHello in hello_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build retry.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/channel/retry.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestFileSystemStore/get_Player_score in score_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/http" />
       <framework value="gotest" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/hello/hello_test.go" />
-      <pattern value="^TestHello$" />
+      <filePath value="$PROJECT_DIR$/http/score_test.go" />
+      <pattern value="^TestFileSystemStore$/^get_Player_score$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNewRunner in runner_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/channel" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/channel/runner_test.go" />
+      <pattern value="^TestNewRunner$" />
       <method v="2" />
     </configuration>
     <configuration name="TestPlayerServer/none in score_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -81,22 +99,13 @@
       <pattern value="^TestPlayerServer$/^none$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRepeat1 in repeat_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/iteration" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/iteration/repeat_test.go" />
-      <pattern value="^TestRepeat1$" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestNewRunner in runner_test.go" />
+        <item itemvalue="Go Build.go build retry.go" />
+        <item itemvalue="Go Test.TestFileSystemStore/get_Player_score in score_test.go" />
         <item itemvalue="Go Test.TestPlayerServer/none in score_test.go" />
         <item itemvalue="Go Build.go build injection.go" />
-        <item itemvalue="Go Test.TestRepeat1 in repeat_test.go" />
-        <item itemvalue="Go Test.TestHello in hello_test.go" />
       </list>
     </recent_temporary>
   </component>

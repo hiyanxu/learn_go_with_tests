@@ -195,7 +195,11 @@ func assertContentType(t *testing.T, response *httptest.ResponseRecorder, want s
 }
 
 func TestRecordingWinsAndRetrievingThem(t *testing.T) {
-	store := NewInMemoryPlayerStore()
+	//store := NewInMemoryPlayerStore()
+	//server := NewPlayerServer(store)
+	database, cleanDatabase := createTempFile(t, "")
+	defer cleanDatabase()
+	store := &FileSystemStore{database: database}
 	server := NewPlayerServer(store)
 	player := "Pepper"
 
@@ -260,10 +264,15 @@ func TestFileSystemStore(t *testing.T) {
 		store := FileSystemStore{database}
 		defer cleanDatabase()
 
-		store.RecordWin("Chris")
+		//store.RecordWin("Chris")
+		//
+		//got := store.GetPlayerScore("Chris")
+		//want := 34
+		//assertScoreEquals(t, got, want)
+		store.RecordWin("Pepper")
 
-		got := store.GetPlayerScore("Chris")
-		want := 34
+		got := store.GetPlayerScore("Pepper")
+		want := 1
 		assertScoreEquals(t, got, want)
 	})
 }
