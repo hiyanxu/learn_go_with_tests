@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/score.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/score.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/score_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/score_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +21,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="ProjectId" id="1eweU2IDswqoS391CscH5u8kMqB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -38,7 +39,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -52,12 +53,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestNewRunner in runner_test.go">
-    <configuration name="go build injection.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build channel2">
+    <configuration name="go build channel2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/di/injection.go" />
+      <working_directory value="$PROJECT_DIR$/channel2" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/channel2/test2.go" />
+      <package value="channel2" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -69,14 +71,12 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="TestFileSystemStore/get_Player_score in score_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build test1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/http" />
-      <framework value="gotest" />
+      <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/channel2/test1.go" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/http/score_test.go" />
-      <pattern value="^TestFileSystemStore$/^get_Player_score$" />
       <method v="2" />
     </configuration>
     <configuration name="TestNewRunner in runner_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -89,23 +89,23 @@
       <pattern value="^TestNewRunner$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestPlayerServer/none in score_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStart in channel1_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/http" />
+      <working_directory value="$PROJECT_DIR$/channel" />
       <framework value="gotest" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/http/score_test.go" />
-      <pattern value="^TestPlayerServer$/^none$" />
+      <filePath value="$PROJECT_DIR$/channel/channel1_test.go" />
+      <pattern value="^TestStart$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build channel2" />
+        <item itemvalue="Go Build.go build test1.go" />
+        <item itemvalue="Go Test.TestStart in channel1_test.go" />
         <item itemvalue="Go Test.TestNewRunner in runner_test.go" />
         <item itemvalue="Go Build.go build retry.go" />
-        <item itemvalue="Go Test.TestFileSystemStore/get_Player_score in score_test.go" />
-        <item itemvalue="Go Test.TestPlayerServer/none in score_test.go" />
-        <item itemvalue="Go Build.go build injection.go" />
       </list>
     </recent_temporary>
   </component>
@@ -124,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>goproxy.cn,direct</proxy>
   </component>
 </project>
