@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/errcode/errcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/errors/errcode/errcode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/errors/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/errors/main.go" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,19 +43,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Go Build.go build channel2">
+  <component name="RunManager" selected="Go Build.go build wire">
     <configuration name="go build channel2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/channel2" />
@@ -63,20 +53,21 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build retry.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/channel/retry.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build test1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/channel2/test1.go" />
       <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build wire" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/wire" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/wire/test1.go" />
+      <package value="wire" />
+      <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <configuration name="TestNewRunner in runner_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -101,32 +92,59 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build wire" />
         <item itemvalue="Go Build.go build channel2" />
         <item itemvalue="Go Build.go build test1.go" />
         <item itemvalue="Go Test.TestStart in channel1_test.go" />
         <item itemvalue="Go Test.TestNewRunner in runner_test.go" />
-        <item itemvalue="Go Build.go build retry.go" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="goproxy.cn,direct" />
+      </map>
+    </environment>
     <proxy>goproxy.cn,direct</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1599977302397">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1599977302397" />
+    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1599977302396">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1599977302396" />
+    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1599977302396">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1599977302396" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1599977302397">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1599977302397" />
+    <state x="221" y="71" key="SettingsEditor" timestamp="1599981015596">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="221" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1599981015596" />
   </component>
 </project>
