@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors/errcode/errcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/errors/errcode/errcode.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/errors/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/errors/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/wire/test1.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +39,9 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Go Build.go build wire">
+  <component name="RunManager" selected="Go Test.TestAppendNormal in slice_insert_test.go (1)">
     <configuration name="go build channel2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$/channel2" />
@@ -53,12 +51,13 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build test1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build errorGoGenereat" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/channel2/test1.go" />
-      <directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/errors" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/errors/main.go" />
+      <package value="errorGoGenereat" />
+      <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <configuration name="go build wire" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -70,33 +69,33 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNewRunner in runner_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAppendNormal in slice_insert_test.go (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/channel" />
+      <working_directory value="$PROJECT_DIR$/array_slice" />
       <framework value="gotest" />
       <kind value="FILE" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/channel/runner_test.go" />
-      <pattern value="^TestNewRunner$" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/array_slice/slice_insert_test.go" />
+      <pattern value="^\QTestAppendNormal\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestStart in channel1_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAppendNormal in slice_insert_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/channel" />
+      <working_directory value="$PROJECT_DIR$/array_slice" />
       <framework value="gotest" />
       <kind value="FILE" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/channel/channel1_test.go" />
-      <pattern value="^TestStart$" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/array_slice/slice_insert_test.go" />
+      <pattern value="^\QTestAppendNormal\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestAppendNormal in slice_insert_test.go (1)" />
+        <item itemvalue="Go Test.TestAppendNormal in slice_insert_test.go" />
         <item itemvalue="Go Build.go build wire" />
+        <item itemvalue="Go Build.go build errorGoGenereat" />
         <item itemvalue="Go Build.go build channel2" />
-        <item itemvalue="Go Build.go build test1.go" />
-        <item itemvalue="Go Test.TestStart in channel1_test.go" />
-        <item itemvalue="Go Test.TestNewRunner in runner_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -126,25 +125,53 @@
     <proxy>goproxy.cn,direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1599977302397">
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1600566888659">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1599977302397" />
-    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1599977302396">
+    <state width="1878" height="348" key="GridCell.Tab.0.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1600566888659" />
+    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1600566888658">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1599977302396" />
-    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1599977302396">
+    <state width="1878" height="348" key="GridCell.Tab.0.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
+    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
+    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1600566888658">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1599977302396" />
-    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1599977302397">
+    <state width="1878" height="348" key="GridCell.Tab.0.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
+    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
+    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1600566888658">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1599977302397" />
-    <state x="221" y="71" key="SettingsEditor" timestamp="1599981015596">
+    <state width="1878" height="348" key="GridCell.Tab.0.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
+    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
+    <state width="1878" height="348" key="GridCell.Tab.1.bottom" timestamp="1600330515183">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1599997772306" />
+    <state width="1878" height="348" key="GridCell.Tab.1.center" timestamp="1600330515183">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
+    <state width="1398" height="254" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
+    <state width="1878" height="348" key="GridCell.Tab.1.left" timestamp="1600330515182">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
+    <state width="1398" height="254" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
+    <state width="1878" height="348" key="GridCell.Tab.1.right" timestamp="1600330515183">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
+    <state width="1398" height="254" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
+    <state x="221" y="71" key="SettingsEditor" timestamp="1599993958673">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="221" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1599981015596" />
+    <state x="221" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1599993958673" />
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1600567380701">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1600567380701" />
   </component>
 </project>
