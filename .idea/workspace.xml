@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus/databus1.go" beforeDir="false" afterPath="$PROJECT_DIR$/databus/databus1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/errors/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/errors/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wire/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/wire/test1.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,9 @@
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -39,63 +45,59 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager" selected="Go Test.TestAppendNormal in slice_insert_test.go (1)">
-    <configuration name="go build channel2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build marshal.go">
+    <configuration name="go build databus" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/channel2" />
+      <working_directory value="$PROJECT_DIR$/databus" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/channel2/test2.go" />
-      <package value="channel2" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build errorGoGenereat" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/errors" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/errors/main.go" />
-      <package value="errorGoGenereat" />
+      <filePath value="$PROJECT_DIR$/databus/databus1.go" />
+      <package value="databus" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build wire" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build marshal.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/wire" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/wire/test1.go" />
-      <package value="wire" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/json/marshal.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestAppendNormal in slice_insert_test.go (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build test1.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/array_slice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/mutex/test1.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build test1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/json/test1.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGetKind in test2_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/reflect" />
       <framework value="gotest" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/array_slice/slice_insert_test.go" />
-      <pattern value="^\QTestAppendNormal\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestAppendNormal in slice_insert_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/array_slice" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/array_slice/slice_insert_test.go" />
-      <pattern value="^\QTestAppendNormal\E$" />
+      <filePath value="$PROJECT_DIR$/reflect/test2_test.go" />
+      <pattern value="^\QTestGetKind\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestAppendNormal in slice_insert_test.go (1)" />
-        <item itemvalue="Go Test.TestAppendNormal in slice_insert_test.go" />
-        <item itemvalue="Go Build.go build wire" />
-        <item itemvalue="Go Build.go build errorGoGenereat" />
-        <item itemvalue="Go Build.go build channel2" />
+        <item itemvalue="Go Build.go build marshal.go" />
+        <item itemvalue="Go Test.TestGetKind in test2_test.go" />
+        <item itemvalue="Go Build.go build test1.go" />
+        <item itemvalue="Go Build.go build test1.go (1)" />
+        <item itemvalue="Go Build.go build databus" />
       </list>
     </recent_temporary>
   </component>
@@ -119,59 +121,107 @@
     <integration-enabled>true</integration-enabled>
     <environment>
       <map>
-        <entry key="GOPROXY" value="goproxy.cn,direct" />
+        <entry key="GOPROXY" value="goproxy.baijiahulian.com,goproxy.cn,direct" />
       </map>
     </environment>
     <proxy>goproxy.cn,direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1600566888659">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="1398" height="251" key="GridCell.Tab.0.bottom" timestamp="1603615983974">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1878" height="348" key="GridCell.Tab.0.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1600566888659" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1600566888658">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="1398" height="252" key="GridCell.Tab.0.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022692" />
+    <state width="1398" height="252" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1603030955882" />
+    <state width="1398" height="251" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1603615983974" />
+    <state width="1398" height="251" key="GridCell.Tab.0.center" timestamp="1603615983974">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1878" height="348" key="GridCell.Tab.0.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1600566888658">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="1398" height="252" key="GridCell.Tab.0.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022691" />
+    <state width="1398" height="252" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1603030955882" />
+    <state width="1398" height="251" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1603615983974" />
+    <state width="1398" height="251" key="GridCell.Tab.0.left" timestamp="1603615983972">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1878" height="348" key="GridCell.Tab.0.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1600566888658">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="1398" height="252" key="GridCell.Tab.0.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022683" />
+    <state width="1398" height="252" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1603030955881" />
+    <state width="1398" height="251" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1603615983972" />
+    <state width="1398" height="251" key="GridCell.Tab.0.right" timestamp="1603615983974">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1878" height="348" key="GridCell.Tab.0.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1600566888658" />
-    <state width="1878" height="348" key="GridCell.Tab.1.bottom" timestamp="1600330515183">
+    <state width="1398" height="252" key="GridCell.Tab.0.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022691" />
+    <state width="1398" height="252" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1603030955882" />
+    <state width="1398" height="251" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1603615983974" />
+    <state width="1398" height="251" key="GridCell.Tab.1.bottom" timestamp="1603615983976">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="252" key="GridCell.Tab.1.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022699" />
+    <state width="1398" height="252" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1603030955883" />
+    <state width="1398" height="251" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1603615983976" />
+    <state width="1398" height="251" key="GridCell.Tab.1.center" timestamp="1603615983975">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="252" key="GridCell.Tab.1.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022692" />
+    <state width="1398" height="252" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1603030955883" />
+    <state width="1398" height="251" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1603615983975" />
+    <state width="1398" height="251" key="GridCell.Tab.1.left" timestamp="1603615983975">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="252" key="GridCell.Tab.1.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022692" />
+    <state width="1398" height="252" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1603030955882" />
+    <state width="1398" height="251" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1603615983975" />
+    <state width="1398" height="251" key="GridCell.Tab.1.right" timestamp="1603615983975">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="252" key="GridCell.Tab.1.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602742022692" />
+    <state width="1398" height="252" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1603030955883" />
+    <state width="1398" height="251" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1603615983975" />
+    <state x="-1625" y="85" key="SettingsEditor" timestamp="1602208390926">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="348" key="GridCell.Tab.1.bottom/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
-    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1599997772306" />
-    <state width="1878" height="348" key="GridCell.Tab.1.center" timestamp="1600330515183">
-      <screen x="-1920" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1878" height="348" key="GridCell.Tab.1.center/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
-    <state width="1398" height="254" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
-    <state width="1878" height="348" key="GridCell.Tab.1.left" timestamp="1600330515182">
-      <screen x="-1920" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1878" height="348" key="GridCell.Tab.1.left/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515182" />
-    <state width="1398" height="254" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
-    <state width="1878" height="348" key="GridCell.Tab.1.right" timestamp="1600330515183">
-      <screen x="-1920" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1878" height="348" key="GridCell.Tab.1.right/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1600330515183" />
-    <state width="1398" height="254" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1599997772305" />
-    <state x="221" y="71" key="SettingsEditor" timestamp="1599993958673">
-      <screen x="0" y="23" width="1440" height="819" />
-    </state>
+    <state x="-1625" y="85" key="SettingsEditor/0.23.1440.819/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1602208390926" />
     <state x="221" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1599993958673" />
+    <state x="516" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603595832938">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="516" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1603595832938" />
     <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1600567380701">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1600567380701" />
+    <state x="450" y="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603612781786">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="450" y="346" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.877@0.23.1440.877" timestamp="1603612781786" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
+          <line>613</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file:///usr/local/go/src/reflect/value.go</url>
+          <line>809</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
+          <line>1119</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
+          <line>1090</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
+          <line>1219</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

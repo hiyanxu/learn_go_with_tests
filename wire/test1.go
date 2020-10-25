@@ -16,6 +16,7 @@ func NewMonster(name string) Monster {
 
 type Player struct {
 	Name string
+	Sex  string
 }
 
 func NewPlayer(name string) Player {
