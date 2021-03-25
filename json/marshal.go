@@ -45,6 +45,20 @@ func (s *Struct6) MarshalJSON() ([]byte, error) {
 	return []byte(str), nil
 }
 
+type Cn struct {
+	CName string `json:"c_name"`
+}
+
+type Bn struct {
+	BName string `json:"b_name"`
+	Cn    `json:"cn"`
+}
+
+type An struct {
+	AName string `json:"a_name"`
+	Bn    `json:"bn"`
+}
+
 func main() {
 	//a := &Agg{
 	//	AggID: 101,
@@ -76,7 +90,18 @@ func main() {
 	//j5, _ := json.Marshal(s5)
 	//fmt.Println(string(j5))
 
-	s66 := &Struct6{S6: "fff"}
-	j6, err := json.Marshal(s66)
-	fmt.Println(string(j6), err)
+	//s66 := &Struct6{S6: "fff"}
+	//j6, err := json.Marshal(s66)
+	//fmt.Println(string(j6), err)
+
+	// 测试匿名字段
+	an := &An{
+		AName: "aName",
+		Bn: Bn{
+			BName: "bName",
+			Cn:    Cn{CName: "cName"},
+		},
+	}
+	jan, err := json.Marshal(an)
+	fmt.Println(string(jan), err)
 }
