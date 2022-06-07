@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 /**
@@ -93,5 +94,8 @@ func greetingPrefix(language string) (prefix string) {
 }
 
 func main()  {
-	fmt.Println(Hello2("world"))
+	//fmt.Println(Hello2("world"))
+
+	et, err := time.Parse("2006-01-02 03:04:05", "2038-01-01 00:00:00")
+	fmt.Printf("et: %+v, err: %+v", et, err)
 }
