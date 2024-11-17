@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -35,4 +36,7 @@ func main() {
 	//wg.Wait()
 
 
+	ctx2 := context.Background()
+	ctx3, _ := context.WithTimeout(ctx2, 3*time.Second)
+	fmt.Println(ctx2, ctx3)
 }

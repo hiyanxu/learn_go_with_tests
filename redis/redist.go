@@ -2,6 +2,7 @@ package redis
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
 	"math/rand"
@@ -25,6 +26,9 @@ func TryCommand()  {
 	if err != nil {
 		panic(err)
 	}
+
+	// test redis pipeline command.
+
 
 	// test EXISTS命令.
 	// 输出：false  <nil>.
@@ -123,6 +127,19 @@ func TryCommand()  {
 	// 当该member不在该集合中时，返回 false, nil.
 	zsetResp3, err := redis.Bool(conn.Do("ZREM", "z1", "m100"))
 	fmt.Printf("zrem not exist member resp: %v, err: %v\n", zsetResp3, err)
+
+	// test. 设置锁操作.
+	setNxResp1, err := redis.String(conn.Do("SET", "lock_t1", "v1", "NX", "EX", 60))
+	fmt.Printf("set nx resp: %+v, err: %+v\n", setNxResp1, err)
+
+	setNxResp2, err := redis.Bool(conn.Do("SET", "lock_t1", "v2", "NX", "EX", 60))
+	fmt.Printf("set nx resp2: %+v, err: %+v, equal: %+v\n", setNxResp2, err, errors.Is(err, redis.ErrNil))
+
+	delNxResp, err := redis.Bool(conn.Do("DEL", "lock_t1"))
+	fmt.Printf("del nx resp: %+v, err: %+v\n", delNxResp, err)
+
+	setNxResp3, err := redis.String(conn.Do("SET", "lock_t1", "v2", "NX", "EX", 60))
+	fmt.Printf("set nx resp3: %+v, err: %+v, equal: %+v\n", setNxResp3, err, errors.Is(err, redis.ErrNil))
 
 }
 

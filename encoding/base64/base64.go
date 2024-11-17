@@ -7,28 +7,32 @@ import (
 	"time"
 )
 func main() {
+	// 线上配置.
 	data := `{
-  "storage": {
-    "name": "content-deliver-storage",
-    "conn": "redis://:4111b9434afab6db81ac27b7a403d722@wredis-content-deliver-content-deliver-storage.global.rack.zhihu.com:26379",
-    "timeout": 1000
-  },
-  "cache": {
-    "name": "content-deliver-cache",
-    "conn": "redis://:fed5077226a1e209792382849b78c84d@credis-content-deliver-cluster3036666.pek01.rack.zhihu.com:26379",
-    "timeout": 1000
-  },
-  "pubsub": {
-    "name": "deliver-pubsub",
-    "conn": "redis://:1de84cceb87dbc17abb2dd9726593929@hredis-content-deliver-storage3090938.pek01.rack.zhihu.com:35197",
-    "timeout": 1000
-  },
-  "nlp": {
-    "name": "ad-nlp-crowd-trigger",
-    "conn": "redis://:a9b854b5329dde5f5af2a6ebb0e5d309@rredis-ad-nlp-crowd-trigger-test.pek01.rack.zhihu.com:26379",
-    "timeout": 1000
-  }
+"storage": {
+  "name": "content-deliver-cost-data",
+  "conn": "redis://:8902ec5cb4fa8dbc58a0d739036fcac8@wredis-content-deliver-content-deliver-cost-data.global.rack.zhihu.com:26379",
+  "timeout": 1000
+}
 }`
+
+	// 测试环境配置.
+//	data := `{
+//  "storage": {
+//    "name": "content-deliver-storage",
+//    "conn": "redis://redis-content-deliver-content-deliver-storage.aspasia.svc.cluster.local:6379",
+//    "timeout": 1000
+//  },
+//  "pubsub_cache": {
+//    "name": "deliver-pubsub",
+//    "config": {
+//      "master": "redis://redis-content-deliver-content-deliver-rpc.aspasia.svc.cluster.local:6379",
+//      "slave": [
+//        "redis://redis-content-deliver-content-deliver-rpc.aspasia.svc.cluster.local:6379"
+//      ]
+//    }
+//  }
+//}`
 	sEnc := base64.StdEncoding.EncodeToString([]byte(data))
 	fmt.Println(sEnc)
 

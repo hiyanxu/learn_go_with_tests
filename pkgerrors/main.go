@@ -26,19 +26,19 @@ func func3() error {
 	输出如下：
 	func1Err
 	main.func2
-		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/main.go:19
+		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/example.go:19
 	main.func3
-		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/main.go:23
+		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/example.go:23
 	main.main
-		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/main.go:9
+		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/example.go:9
 	runtime.main
 		/usr/local/go/src/runtime/proc.go:203
 	runtime.goexit
 		/usr/local/go/src/runtime/asm_amd64.s:1357
 	main.func3
-		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/main.go:24
+		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/example.go:24
 	main.main
-		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/main.go:9
+		/Users/bjhl/Documents/baijiahulian/learn_go_with_tests/pkgerrors/example.go:9
 	runtime.main
 		/usr/local/go/src/runtime/proc.go:203
 	runtime.goexit

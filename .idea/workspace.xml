@@ -4,12 +4,26 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864de28b-0851-4c07-bab3-6bae773306cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/learn_go_with_tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learn_go_with_tests.iml" afterDir="false" />
+    <list default="true" id="7d038f06-c6a2-4c2a-bb26-e0d1b26bdd25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/xtools/example.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xtools/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xtools/pkg/rpc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xtools/wire.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/context/test1.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ctx/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/ctx/test1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databus/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/databus/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello/hello.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/databus/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encoding/base64/base64.go" beforeDir="false" afterPath="$PROJECT_DIR$/encoding/base64/base64.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkgerrors/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkgerrors/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/redis/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/redis/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis/go_redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/redis/go_redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis/redist.go" beforeDir="false" afterPath="$PROJECT_DIR$/redis/redist.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire2/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire2/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/xtools/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire2/test1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire2/wire.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wire2/wire_gen.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +37,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.16.4" />
+  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.21.0" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -36,15 +50,21 @@
     </file-type-list>
   </component>
   <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="2" />
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/garyburd/redigo@v1.6.1-0.20180228183837-a7327d8ced80/redis/reply.go" root0="SKIP_INSPECTION" />
   </component>
-  <component name="ProjectId" id="1eweU2IDswqoS391CscH5u8kMqB" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ASVg97599buoDg2JY3pamcQIPE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -52,23 +72,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go 构建.go build test1.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go 测试.b_test.go 中的 TestCal.executor&quot;: &quot;Debug&quot;,
+    &quot;Go 测试.bubblesort_test.go 中的 TestBubbleSort_Sort.executor&quot;: &quot;Run&quot;,
+    &quot;Go 测试.list_test.go 中的 TestLinkList.executor&quot;: &quot;Run&quot;,
+    &quot;Go 测试.select1_test.go 中的 TestSelectUse1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hiyanxu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg" />
+    </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build databus">
+  <component name="RunManager" selected="Go 测试.b_test.go 中的 TestCal">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$" />
@@ -78,48 +107,12 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build base64.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/encoding/base64/base64.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build databus" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/databus" />
-      <kind value="PACKAGE" />
-      <package value="databus" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/databus/producer.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/hello/hello.go" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build test1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="learn_go_with_tests" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ctx/test1.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestInitUserIndustryIds in github.com/hiyanxu/redist" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_with_tests" />
-      <working_directory value="$PROJECT_DIR$/redis" />
-      <kind value="PACKAGE" />
-      <package value="github.com/hiyanxu/redist" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestInitUserIndustryIds\E$" />
+      <filePath value="$PROJECT_DIR$/context/test1.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -132,15 +125,62 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="b_test.go 中的 TestCal" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/alg" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/alg/b_test.go" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCal\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bubblesort_test.go 中的 TestBubbleSort_Sort" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/alg/sort" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/alg/sort/bubblesort_test.go" />
+      <framework value="gotest" />
+      <pattern value="^\QTestBubbleSort_Sort\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="list_test.go 中的 TestLinkList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/alg/linklist" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/alg/linklist/list_test.go" />
+      <framework value="gotest" />
+      <pattern value="^\QTestLinkList\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="select1_test.go 中的 TestSelectUse1" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_with_tests" />
+      <working_directory value="$PROJECT_DIR$/select" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/select/select1_test.go" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSelectUse1\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build databus" />
-        <item itemvalue="Go Build.go build hello.go" />
-        <item itemvalue="Go Build.go build base64.go" />
-        <item itemvalue="Go Build.go build test1.go" />
-        <item itemvalue="Go Test.TestInitUserIndustryIds in github.com/hiyanxu/redist" />
+        <item itemvalue="Go 测试.b_test.go 中的 TestCal" />
+        <item itemvalue="Go 构建.go build test1.go" />
+        <item itemvalue="Go 测试.select1_test.go 中的 TestSelectUse1" />
+        <item itemvalue="Go 测试.list_test.go 中的 TestLinkList" />
+        <item itemvalue="Go 测试.bubblesort_test.go 中的 TestBubbleSort_Sort" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-2946fb9b3188-155fe4b6e3a0-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.14475.38" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,54 +196,18 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
-    <environment>
-      <map>
-        <entry key="GOPROXY" value="goproxy.cn,direct" />
-      </map>
-    </environment>
-    <proxy>goproxy.cn,direct</proxy>
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file:///usr/local/go/src/reflect/value.go</url>
-          <line>809</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file:///usr/local/go/src/context/context.go</url>
-          <line>241</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
-          <line>1090</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
-          <line>1278</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file:///usr/local/go/src/encoding/json/encode.go</url>
-          <line>635</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../../go/pkg/mod/github.com/garyburd/redigo@v1.6.1-0.20180228183837-a7327d8ced80/redis/reply.go</url>
-          <line>426</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/databus/producer.go</url>
-          <line>113</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/redis/redist_test.go</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
