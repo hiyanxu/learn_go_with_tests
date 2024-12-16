@@ -64,7 +64,7 @@ func main() {
 	m.Topic = topic
 	m.Value = sarama.StringEncoder(jMsg)
 
-	producer, err := sarama.NewSyncProducer([]string{"kafka-dev01.dev.rack.zhihu.com:3390", "kafka-dev02.dev.rack.zhihu.com:3390", "kafka-dev03.dev.rack.zhihu.com:3390"}, config)
+	producer, err := sarama.NewSyncProducer([]string{"", "", ""}, config)
 	if err != nil {
 		fmt.Printf("producer err: %+v\n", err)
 		return
