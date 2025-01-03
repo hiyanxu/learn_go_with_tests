@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80740cb3-a7f9-475b-9213-fc79dc57c1b5" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maps/readwrite.go" beforeDir="false" afterPath="$PROJECT_DIR$/maps/readwrite.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "正在合并 feature/t2"
+    "git-widget-placeholder": "feature/t2"
   }
 }]]></component>
   <component name="RecentsManager">
