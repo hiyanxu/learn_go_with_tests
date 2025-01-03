@@ -20,6 +20,8 @@ func HandleReadWriteMap() {
 	fmt.Println(a)
 	fmt.Println(a1)
 
+	fmt.Println("test git delete")
+
 	a1.m1 = make(map[string]interface{}) // 重新赋一个新的 map，不改原来的.
 	fmt.Println(a)
 	fmt.Println(a1)
